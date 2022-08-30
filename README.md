@@ -1,5 +1,16 @@
 NodeJs ExpressJs MySql Authentication Rest API with jsonwebtoken
 ================================================================
+##### .env-->
+```:
+SERVER\_PORT=your port 
+NODE\_ENV\_MODE=development 
+JWT\_SECRET=your jwt secret key 
+
+MYSQL\_DB\_HOST=database host name 
+MYSQL\_DB\_USER=database username 
+MYSQL\_DB\_PASSWORD=database password 
+MYSQL\_DB\_NAME=database name
+```
 
 #### Library or Dependencies used in this project
 
@@ -35,23 +46,4 @@ Express Validator is an Express middleware library that you can incorporate in y
 
 This is a node.js driver for mysql.It's used for connecting nodejs server with database and making all querys.
 
-```javascript:
-const { check } = require("express-validator");
 
-exports.userSignupValidator = [
-  check("name").not().isEmpty().withMessage("Name is required"),
-  check("username").not().isEmpty().withMessage("username is required"),
-  check("email").isEmail().withMessage("Must be a valid email address"),
-  check("password")
-    .isLength({ min: 6 })
-    .withMessage("Password must be at least 6 characters long"),
-];
-
-exports.userSigninValidator = [
-  check("username").not().isEmpty().withMessage("username is required"),
-  check("password")
-    .isLength({ min: 6 })
-    .withMessage("Try with at least 6 characters"),
-];
-
-```
