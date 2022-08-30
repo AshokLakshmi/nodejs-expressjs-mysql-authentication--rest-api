@@ -21,12 +21,27 @@ MYSQL_DB_USER=database username
 MYSQL_DB_PASSWORD=database password 
 MYSQL_DB_NAME=database name
 ```
-
+**3.MySql Table Details
+  ```bash
+  DROP TABLE IF EXISTS `users`;
+  CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `username` varchar(150) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `password` varchar(500) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`)
+);
+  ```
 **3. Run Command
 ```bash
-run this command to start the app
+run npm install
+// to install all Dependencies
+//run this command to start the app
 nodemon server.js 
-or
+//or
 node server.js
 
 ```
@@ -37,15 +52,17 @@ The app will start running at <http://localhost:5001>.
 
 The app defines following methods is this APIs.
     
-    POST /api/register
+    POST /api/signup
     
-    POST /api/login
+    POST /api/signin
     
     GET /api/signout
     
     GET /api/protected
 
-You can test them using postman or any other rest client.
+You can test them using postman ,insomnia or any other rest client.
+
+##### when you login using this API ,In json response you will get jwt token & user details.
 
 #### Library or Dependencies used in this project
 
