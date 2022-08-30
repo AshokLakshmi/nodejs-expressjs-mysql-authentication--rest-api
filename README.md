@@ -2,14 +2,14 @@ NodeJs ExpressJs MySql Authentication Rest API with jsonwebtoken
 ================================================================
 ##### .env-->
 ```:
-SERVER\_PORT=your port 
-NODE\_ENV\_MODE=development 
-JWT\_SECRET=your jwt secret key 
+SERVER_PORT=your port 
+NODE_ENV_MODE=development 
+JWT_SECRET=your jwt secret key 
 
-MYSQL\_DB\_HOST=database host name 
-MYSQL\_DB\_USER=database username 
-MYSQL\_DB\_PASSWORD=database password 
-MYSQL\_DB\_NAME=database name
+MYSQL_DB_HOST=database host name 
+MYSQL_DB_USER=database username 
+MYSQL_DB_PASSWORD=database password 
+MYSQL_DB_NAME=database name
 ```
 
 #### Library or Dependencies used in this project
