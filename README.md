@@ -1,7 +1,17 @@
-NodeJs ExpressJs MySql Authentication Rest API with jsonwebtoken
-================================================================
-##### .env-->
-```:
+# Node Js, Express Js, MySql, JsonWebToken, Express-Validator Rest API 
+
+Build Restful Authentication API for a simple application using NodeJs ExpressJs, Mysql, jwt & Express-validator.
+
+## Steps to Setup
+
+**1. Clone the application**
+
+```bash
+git clone https://github.com/AshokLakshmi/nodejs-expressjs-mysql-authentication--rest-api.git
+```
+
+**2. Create .env file**
+```bash
 SERVER_PORT=your port 
 NODE_ENV_MODE=development 
 JWT_SECRET=your jwt secret key 
@@ -11,6 +21,31 @@ MYSQL_DB_USER=database username
 MYSQL_DB_PASSWORD=database password 
 MYSQL_DB_NAME=database name
 ```
+
+**3. Run Command
+```bash
+run this command to start the app
+nodemon server.js 
+or
+node server.js
+
+```
+
+The app will start running at <http://localhost:5001>.
+
+## Explore Rest APIs
+
+The app defines following methods is this APIs.
+    
+    POST /api/register
+    
+    POST /api/login
+    
+    GET /api/signout
+    
+    GET /api/protected
+
+You can test them using postman or any other rest client.
 
 #### Library or Dependencies used in this project
 
